@@ -190,7 +190,7 @@ for i= 1:NCLUST
     rhos_in_cl1 = rho(cl == labels(i));
     pts_nums_in_cl(i) = length(find(cl==labels(i)));
     max_rho_in_cl(i) = max(rhos_in_cl1);
-    sharpness =  mean(abs(rhos_in_cl1 - mean(rhos_in_cl1)))/(max(rhos_in_cl1)-min(rho));
+    sharpness =  mean(abs(rhos_in_cl1 - mean(rhos_in_cl1)))/(max(rhos_in_cl1));
     merging_ability(i) = sharpness_gauss/sharpness;
 end
 
